@@ -1,28 +1,30 @@
 // 처음 실행되는 함수 time()
-$(function() { // 페이지 로드 이후 시작하는 jQuery코드
+var cnt = 0;
+$(document).ready(function() { // 페이지 로드 이후 시작하는 jQuery코드
   // 바깥에 빼 놓은 변하지 않는 것들
   var noon_list = $(".noon");
   var hour_list = $(".hour");
   var min_list = $(".min");
-
   function time() {
     // color-picker로 변경되는 색
     var bg_color = document.body.style.backgroundColor;
+    if (this.cnt === 0){
+      bg_color = "white";
+      this.cnt++;
+    }
     var color = document.body.style.color;
     // 계속해서 변경되는 시간
     var date = new Date();
     var hour = date.getHours();
     var min = date.getMinutes();
-
     // 시간을 보고 오전/오후를 변경
-    noon_list[0].style.color = color;
+    $("noon_오").css("color",color);
     if (hour > 12)
-      noon_list[1].style.color = bg_color;
+      $("noon_전").css("color",bg_color);
     else if (hour < 12)
-      noon_list[2].style.color = bg_color;
+      $("noon_후").css("color",bg_color);
     else
       $(".noon").css("color", color); //정오에는 오전이기도 하고 오후이기도 함
-
     // 시를 나타내는 것들의 색을 지정
     $(".hour").css("color", bg_color);
     if (hour > 12)
@@ -119,8 +121,22 @@ $(function() { // 페이지 로드 이후 시작하는 jQuery코드
         $("#min_구").css("color", color);
         break;
     }
-
     var t = setTimeout(time, 1);
   }
   time();
 });
+var fontsize = 30;
+function big() {
+  value1 = document.getElementsByClassName("letter");
+  fontsize += 5;
+  for(i=0;i<value1.length;i++){
+    value1[i].style.fontSize = fontsize + "px";
+  }
+}
+function small() {
+  value1 = document.getElementsByClassName("letter");
+  fontsize -= 5;
+  for(i=0;i<value1.length;i++){
+    value1[i].style.fontSize = fontsize + "px";
+  }
+}

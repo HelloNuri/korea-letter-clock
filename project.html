@@ -4,7 +4,8 @@
 <head>
   <!-- CSS, JavaScript 연결 -->
   <link rel="stylesheet" type="text/css" href="./css/StyleSheet.css">
-  <script src="./js/jquery-3.2.1.min.js"></script>
+  <!-- <script src="./js/jquery-3.2.1.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="./js/js.js"></script>
   <!-- 기본 데이터 -->
   <title>Hangle</title>
@@ -78,11 +79,6 @@
     <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">Pick Text Color</button>
     <button class="jscolor {valueElement:'chosen-value', onFineChange:'setBackgroundColor(this)'}">Pick Background Color</button>
   </section>
-  <!-- 글자 크기 조절 버튼 -->
-  <section class="container">
-    <button onclick="big()">-</button>
-    <button onclick="small()">+</button>
-  </section>
   <!-- color-picker -->
   <section class="container">
     <script src="./js/jscolor.js"></script>
@@ -96,23 +92,14 @@
       }
     </script>
   </section>
-
-
-  <!-- 주석 시작 -->
-  <!--
-  미리보는 사용자 화면
-
-       오 전 후
-
-    열 한 두 세 아
-    네 다 일 곱 홉
-    여 섯 여 덟 시
-
-    이 삼 사 오 십
-    일 이 삼 사 오
-    육 칠 팔 구 분
-                                                                                                    -->
-  <!-- 주석 끝 -->
+  <!-- 글자 크기 조절 버튼 -->
+  <section class="container">
+    <button onclick="small()">-</button>
+    <button onclick="big()">+</button>
+  </section>
+  <script type="text/javascript">
+  
+  </script>
 </body>
 
 </html>

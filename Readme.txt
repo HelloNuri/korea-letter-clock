@@ -11,3 +11,6 @@
 제작자
   10509-류재욱
   10513+손유철
+
+Todo
+페이지 로드 직후 color = backgroundColor이 적용되도록 한다
