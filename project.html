@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- CSS, JavaScript 연결 -->
+  <link rel="stylesheet" type="text/css" href="./css/StyleSheet.css">
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/js.js"></script>
+  <!-- 기본 데이터 -->
+  <title>Hangle</title>
+</head>
+
+<body>
+  <!-- 본문 - 시계 글자 묶음 -->
+  <article class="container">
+    <!--오 전 후-->
+    <section class="container">
+      <div class="letter noon" id="noon_오">오</div>
+      <div class="letter noon" id="noon_전">전</div>
+      <div class="letter noon" id="noon_후">후</div>
+    </section>
+
+    <!-- 시 -->
+    <!--열 한 두 세 아-->
+    <section class="container">
+      <div class="letter hour" id="hour_열">열</div>
+      <div class="letter hour" id="hour_한">한</div>
+      <div class="letter hour" id="hour_두">두</div>
+      <div class="letter hour" id="hour_세">세</div>
+      <div class="letter hour" id="hour_아">아</div>
+    </section>
+    <!--네 다 일 곱 홉-->
+    <section class="container">
+      <div class="letter hour" id="hour_네">네</div>
+      <div class="letter hour" id="hour_다">다</div>
+      <div class="letter hour" id="hour_일">일</div>
+      <div class="letter hour" id="hour_곱">곱</div>
+      <div class="letter hour" id="hour_홉">홉</div>
+    </section>
+    <!--여 섯 여 덟 시-->
+    <section class="container">
+      <div class="letter hour" id="hour_여_six">여</div>
+      <div class="letter hour" id="hour_섯">섯</div>
+      <div class="letter hour" id="hour_여">여</div>
+      <div class="letter hour" id="hour_덟">덟</div>
+      <div class="letter hour" id="hour_시">시</div>
+    </section>
+
+    <!-- 분 -->
+    <!--이 삼 사 오 십-->
+    <section class="container">
+      <div class="letter min" id="tenmin_이">이</div>
+      <div class="letter min" id="tenmin_삼">삼</div>
+      <div class="letter min" id="tenmin_사">사</div>
+      <div class="letter min" id="tenmin_오">오</div>
+      <div class="letter min" id="tenmin_십">십</div>
+    </section>
+    <!--일 이 삼 사 오-->
+    <section class="container">
+      <div class="letter min" id="min_일">일</div>
+      <div class="letter min" id="min_이">이</div>
+      <div class="letter min" id="min_삼">삼</div>
+      <div class="letter min" id="min_사">사</div>
+      <div class="letter min" id="min_오">오</div>
+    </section>
+    <!--육 칠 팔 구 분-->
+    <section class="container">
+      <div class="letter min" id="min_육">육</div>
+      <div class="letter min" id="min_칠">칠</div>
+      <div class="letter min" id="min_팔">팔</div>
+      <div class="letter min" id="min_구">구</div>
+      <div class="letter min" id="min_분">분</div>
+    </section>
+
+  </article>
+  <!-- color-picker 버튼 -->
+  <section class="container">
+    <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">Pick Text Color</button>
+    <button class="jscolor {valueElement:'chosen-value', onFineChange:'setBackgroundColor(this)'}">Pick Background Color</button>
+  </section>
+  <!-- 글자 크기 조절 버튼 -->
+  <section class="container">
+    <button onclick="big()">-</button>
+    <button onclick="small()">+</button>
+  </section>
+  <!-- color-picker -->
+  <section class="container">
+    <script src="./js/jscolor.js"></script>
+    <script>
+      function setBackgroundColor(picker) {
+        document.getElementsByTagName('body')[0].style.backgroundColor = '#' + picker.toString()
+      }
+
+      function setTextColor(picker) {
+        document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+      }
+    </script>
+  </section>
+
+
+  <!-- 주석 시작 -->
+  <!--
+  미리보는 사용자 화면
+
+       오 전 후
+
+    열 한 두 세 아
+    네 다 일 곱 홉
+    여 섯 여 덟 시
+
+    이 삼 사 오 십
+    일 이 삼 사 오
+    육 칠 팔 구 분
+                                                                                                    -->
+  <!-- 주석 끝 -->
+</body>
+
+</html>

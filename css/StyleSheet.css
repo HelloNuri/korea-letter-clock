@@ -1,0 +1,14 @@
+.clear{
+    clear: both;
+}
+.letter{
+    float: left;
+    padding : 10px 10px;
+    font-size: 30px;
+}
+.container {
+  clear: both;
+}
+body {
+    background-color: white;
+}
